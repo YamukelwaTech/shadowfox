@@ -24,10 +24,18 @@ def area(radius, pi):
 
 pi = 3.14
 result = area(10, pi)
-print("Area of the pond is ", int((result)), "meters")
+print("Area of the pond is ", int(result), "meters")
 
 sqaure_meter = 1.4
 total_water = result * sqaure_meter
-print("Total water of the pond is ", int((total_water)), "meters")
+print("Total water of the pond is ", int(total_water), "meters")
 
 # task 3
+
+
+def my_speed(distance, time):
+    speed = distance / time
+    return speed
+
+answer = my_speed(490, 7)
+print("My speed is ", int(answer), "meters per second")
