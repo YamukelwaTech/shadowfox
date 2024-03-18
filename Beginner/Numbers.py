@@ -37,5 +37,6 @@ def my_speed(distance, time):
     speed = distance / time
     return speed
 
+
 answer = my_speed(490, 7)
 print("My speed is ", int(answer), "meters per second")
