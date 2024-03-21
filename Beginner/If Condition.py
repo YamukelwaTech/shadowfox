@@ -1,4 +1,14 @@
+"""
+Summary:
+This Python script contains functions to calculate BMI, determine the country of a city, and check if two cities belong to the same country.
+
+Objective:
+The objective of this script is to provide functionality for calculating BMI, determining the country of a city, and checking if two cities belong to the same country.
+
+"""
+
 # task 1
+# Explanation: Calculates BMI (Body Mass Index) based on user input of height and weight, and provides an interpretation of the result.
 height = float(input("Please enter your height in meters: "))
 weight = float(input("Please enter your weight in kilograms: "))
 
@@ -21,6 +31,7 @@ print("Your BMI answer is:", answer)
 print("Your calculated BMI value is:", calculated_bmi)
 
 # task 2
+# Explanation: Determines the country of a given city based on predefined lists of cities for Australia, UAE, and India.
 Australia = ["Sydney", "Melbourne", "Brisbane", "Perth"]
 UAE = ["Dubai", "Abu Dhabi", "Sharjah", "Ajman"]
 India = ["Mumbai", "Bangalore", "Chennai", "Delhi"]
@@ -43,7 +54,7 @@ def Country(city_name):
 print(Country(city_name))
 
 # task 3
-
+# Explanation: Checks if two given cities belong to the same country based on predefined lists of cities for Australia, UAE, and India.
 Australia = ["Sydney", "Melbourne", "Brisbane", "Perth"]
 UAE = ["Dubai", "Abu Dhabi", "Sharjah", "Ajman"]
 India = ["Mumbai", "Bangalore", "Chennai", "Delhi"]

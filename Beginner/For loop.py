@@ -1,6 +1,14 @@
-# task 1
-# Other methods can be implemented; I used a function for convenience.
+"""
+Summary:
+This Python script includes functions to simulate rolling dice and performing jumping jacks. It also incorporates logic to track occurrences of specific outcomes during dice rolls and manage a jumping jack workout session.
 
+Objective:
+The objective of this script is to provide functionality for simulating dice rolls, tracking occurrences of specific outcomes, and managing a jumping jack workout session with user interaction.
+
+"""
+
+# task 1
+# Explanation: Defines a function 'roll_dice' to simulate rolling a die multiple times and tracks occurrences of specific outcomes such as rolling a 6, rolling a 1, and rolling double 6s.
 import random
 
 
@@ -32,18 +40,22 @@ def roll_dice(num_rolls):
 
 roll_dice(20)
 
+# Explanation: Simulates a jumping jack workout session with user interaction. It performs jumping jacks in sets of 10 until completed or until the user indicates tiredness or completion.
 total_jumping_jacks = 100
 
-# Perform jumping jacks in sets of 10 until completed or tired
 while total_jumping_jacks > 0:
     set_size = min(10, total_jumping_jacks)
     print(f"Performing {set_size} jumping jacks...")
     tired = input("Are you tired? (yes/no): ").lower()
 
     if tired == "yes" or tired == "y":
-        skip_remaining = input("Do you want to skip the remaining sets? (yes/no): ").lower()
+        skip_remaining = input(
+            "Do you want to skip the remaining sets? (yes/no): "
+        ).lower()
         if skip_remaining == "yes" or skip_remaining == "y":
-            print(f"You completed a total of {100 - total_jumping_jacks} jumping jacks.")
+            print(
+                f"You completed a total of {100 - total_jumping_jacks} jumping jacks."
+            )
             break
         else:
             print("Continuing with the next set...")
