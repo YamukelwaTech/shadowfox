@@ -1,24 +1,32 @@
-# Task 1
+"""
+Summary:
+This Python script contains code snippets demonstrating various concepts and potential issues related to Python programming.
 
+Objective:
+The objective of this script is to provide illustrative examples for understanding Python syntax, data types, reserved keywords, and basic arithmetic operations.
+
+"""
+
+# Task 1
+# Explanation: Assigns the value 227 to the variable pi and prints its type and checks if it is an instance of the integer class.
 pi = 227
 print(type(pi))
 print(isinstance(pi, int))
 
 # Task 2
-
-# reserved keyword "for" in Python
-# This code will not work
+# Explanation: Demonstrates the use of a reserved keyword 'for' in Python which results in a syntax error.
+# This code is commented out to prevent syntax errors.
 # for = 4
 
-# task 3
-
+# Task 3
+# Explanation: Calculates simple interest using the provided principal amount, interest rate, and time period.
 principal_amount = 4587
-intrest = 5
+interest = 5
 time = 3
 
 P = principal_amount
-R = intrest
+R = interest
 T = time
 
-simple_intrest = (P * R * T) / 100
-print(simple_intrest)
+simple_interest = (P * R * T) / 100
+print(simple_interest)
