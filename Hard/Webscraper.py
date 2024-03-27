@@ -1,13 +1,9 @@
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 
-# Send a GET request to the webpage
-url = 'https://example.com'
-response = requests.get(url)
+url = "https://shadowfox.in/"
+page = requests.get(url)
+soup = BeautifulSoup(page.text, "html.parser")
 
-# Parse the HTML content
-soup = BeautifulSoup(response.text, 'html.parser')
-
-# Extract the title of the webpage
-title = soup.title.string
-print("Title of the webpage:", title)
+print(page)
+print(soup.prettify())  # Print the prettified HTML content
