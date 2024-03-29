@@ -41,10 +41,10 @@ try:
             print("No div element with class 'row' found.")
 
         # Save data to a JSON file
-        with open("data.json", "w") as json_file:
+        with open("webscraper.json", "w") as json_file:
             json.dump(data, json_file)
 
-        print("Data saved to 'data.json' successfully.")
+        print("Data saved to 'webscraper.json' successfully.")
 
     else:
         print("Failed to retrieve the page. Status Code:", page.status_code)
