@@ -4,7 +4,7 @@ import json
 import os
 
 url = "https://shadowfox.in/"
-json_file_path = "webscraper.json"
+json_file_path = "intermediate/webscraper.json"
 
 # Check if the JSON file already exists
 if os.path.exists(json_file_path):
