@@ -1,26 +1,36 @@
+"""
+Summary:
+This Python script scrapes data from the website "https://shadowfox.in/", updates an existing JSON file ('webscraper.json') with the retrieved data if the file exists, and prints information about the status code, list items, and div text. It handles errors gracefully, including network-related errors and unexpected exceptions.
+
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import json
 import os
 
+# URL of the website to scrape
 url = "https://shadowfox.in/"
+
+# File path for the JSON file
 json_file_path = "intermediate/webscraper.json"
 
 # Check if the JSON file already exists
 if os.path.exists(json_file_path):
-    # Load existing data from the JSON file
+    # If the JSON file exists, load existing data from it
     with open(json_file_path, "r") as json_file:
         existing_data = json.load(json_file)
 else:
+    # If the JSON file doesn't exist, initialize an empty dictionary
     existing_data = {}
 
 try:
     # Sending a GET request to the URL
     page = requests.get(url)
 
-    # Checking if the request was successful
+    # Checking if the request was successful (status code 200)
     if page.status_code == 200:
-        # Parsing the HTML content
+        # Parsing the HTML content of the page
         soup = BeautifulSoup(page.text, "html.parser")
 
         # Update the dictionary with the new data
@@ -58,7 +68,9 @@ try:
         print("Failed to retrieve the page. Status Code:", page.status_code)
 
 except requests.RequestException as e:
+    # Handling network-related errors
     print("An error occurred:", e)
 
 except Exception as e:
+    # Handling unexpected errors
     print("An unexpected error occurred:", e)
