@@ -1,3 +1,23 @@
+"""
+Summary:
+This Python script implements a Hangman game where the player guesses letters or words to uncover a hidden word. The game randomly selects a word from a predefined list and allows the player to guess until they either guess the word correctly or run out of attempts. It utilizes ASCII art for displaying the Hangman's status and handles various user inputs and game states.
+
+Libraries Used:
+- random: For randomly selecting a word from the predefined list.
+- predefined (custom module): Contains a list of words for the game.
+- MAX_TRIES: Defines the maximum number of attempts allowed in the game.
+
+Functions:
+1. get_word(): Chooses a random word from the predefined list.
+2. play(word): Executes the Hangman game logic.
+3. update_word_completion(word, word_completion, guess): Updates the word completion based on the guessed letter.
+4. display_hangman(tries): Displays Hangman ASCII art based on the remaining attempts.
+5. main(): Main function to initiate the game, allowing the player to play multiple rounds.
+
+Execution:
+The script initiates the game by calling the main() function. After each round, it prompts the player if they want to play again and continues accordingly.
+"""
+
 import random
 from predefined import word_list
 

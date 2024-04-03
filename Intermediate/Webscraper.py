@@ -1,8 +1,31 @@
 """
 Summary:
-This Python script scrapes data from the website "https://shadowfox.in/", updates an existing JSON file ('webscraper.json') with the retrieved data if the file exists, and prints information about the status code, list items, and div text. It handles errors gracefully, including network-related errors and unexpected exceptions.
+This Python script performs web scraping on the website "https://shadowfox.in/". It retrieves data from the website, including the HTTP status code, list items, and text from a specific div element. The script then updates an existing JSON file ('webscraper.json') with the retrieved data if the file exists, or creates a new JSON file if it doesn't. It handles various errors gracefully, including network-related errors and unexpected exceptions.
 
+Libraries Used:
+- requests: For sending HTTP requests to the website.
+- BeautifulSoup (from bs4): For parsing HTML content.
+- json: For handling JSON data.
+- os: For interacting with the operating system, particularly for file path operations.
+
+Variables:
+- url: The URL of the website to scrape.
+- json_file_path: The file path for the JSON file where scraped data will be stored.
+- existing_data: A dictionary to store existing data from the JSON file or initialize an empty one.
+
+Functions/Code Blocks:
+1. Check if the JSON file exists and load existing data if available.
+2. Send a GET request to the URL and check if the request was successful (status code 200).
+3. Parse the HTML content of the page using BeautifulSoup.
+4. Update the dictionary with new data, including status code, list items, and div text.
+5. Print status code, list items, and div text.
+6. Save updated data back to the JSON file.
+7. Handle errors using try-except blocks, distinguishing between network-related errors and unexpected exceptions.
+
+Execution:
+The script initiates the web scraping process by sending a GET request to the specified URL. It then extracts relevant data from the HTML content and updates the JSON file accordingly. Error handling ensures that network issues or unexpected exceptions are properly managed, providing informative messages to the user.
 """
+
 
 import requests
 from bs4 import BeautifulSoup
