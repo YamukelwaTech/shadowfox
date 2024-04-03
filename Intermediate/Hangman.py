@@ -18,18 +18,24 @@ Execution:
 The script initiates the game by calling the main() function. After each round, it prompts the player if they want to play again and continues accordingly.
 """
 
+import json
 import random
-from predefined import word_list
 
-import random
 
 MAX_TRIES = 6
 
 
+def get_words_from_json(file_path):
+    with open(file_path, "r") as json_file:
+        data = json.load(json_file)
+        return data["word_list"]
+
+word_list = get_words_from_json("intermediate/words.json")
+
+
 def get_word():
-    """Choose a random word from a list."""
-    word = random.choice(word_list)
-    return word.upper()
+    """Choose a random word from the list."""
+    return random.choice(word_list).upper()
 
 
 def play(word):
