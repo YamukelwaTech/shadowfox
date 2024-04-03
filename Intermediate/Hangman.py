@@ -52,7 +52,11 @@ def play(word):
     print("\n")
 
     while not guessed and tries > 0:
-        guess = input("Please guess a letter or word: ").upper()
+        guess = input("Please guess a letter or word, or type 'HINT' for a hint: ").upper()
+
+        if guess == "HINT":
+            print("Here's a hint: The word starts with '{}' and has {} letters.".format(word[0], len(word)))
+            continue
 
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
